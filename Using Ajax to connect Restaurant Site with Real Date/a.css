@@ -1,0 +1,117 @@
+body {
+    font-family: arial;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  header {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 255, 0, 0.6);
+  }
+  .wrapper nav {
+    display: flex;
+    justify-content: space-around;
+    color: #00f;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 20px;
+  }
+  .wrapper nav.scroll {
+    background-color: #f90;
+    font-size: 14px;
+  }
+  .wrapper nav ul {
+    list-style: none;
+    margin: 13px 0 0 0;
+  }
+  .wrapper nav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+  }
+  .wrapper nav ul li:hover {
+    background: #f00;
+  }
+  .wrapper section p {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .wrapper .bar {
+  }
+  .wrapper .bar ul {
+    width: 60px;
+    border: 1px solid #eee;
+    list-style: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .wrapper .bar ul li {
+    width: 30px;
+    border: 1px solid #fff;
+    height: 1px;
+    margin: 9px;
+  }
+  .responsive-bar {
+    display: none;
+  }
+  .responsive-bar h1 {
+    margin: 0;
+    display: inline-block;
+  }
+  .burger {
+    float: right;
+    background-color: burlywood;
+    padding: 0 6px;
+    border-radius: 2px;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #eee;
+    margin: 6px 0;
+    transition: 0.4s all ease-in-out;
+  }
+  .change .bar1 {
+    transform: rotate(45deg) translate(7px, 9px);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    transform: rotate(-45deg) translate(7px, -9px);
+  }
+  @media screen and (max-width: 992px) {
+    .wrapper nav h1 {
+      display: none;
+    }
+    .responsive-bar {
+      display: block;
+      padding: 20px 60px;
+    }
+    .burger {
+      z-index: 3;
+      position: relative;
+    }
+    .wrapper nav ul {
+      display: none;
+      position: relative;
+      top: 50px;
+      z-index: 0;
+    }
+    .wrapper nav ul li {
+      display: block;
+      background-color: #fff;
+      width: 50vw;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+  }
+  
